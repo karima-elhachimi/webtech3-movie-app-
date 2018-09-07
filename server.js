@@ -30,6 +30,10 @@ app.get('/', function (req, res) {
     res.render('add.ejs');
 });
 
+app.get('/add', function (req, res) {
+    res.render('add.ejs');
+});
+
 app.get('/search', (req, res) => {
     res.render('search.ejs');
 });
