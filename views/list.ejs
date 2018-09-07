@@ -9,17 +9,21 @@
   <h1>All products</h1>
 
   <ul class='product'>
-  <% for(var i=0; i < products.length; i++) {%>
+  <% for(var i=0; i < movies.length; i++) {%>
     <li class='product'>
-      <span><%= products[i].name %></span>
-      <span><%= products[i].description %></span><br /><br />
-      <span><b>Price : </b><%= products[i].price %></span>
+      <span><%= movies[i].title %></span>
+      <ul>
+        <span>Actors playing in movie: </span><br />
+        <% for(var j=0; j < movies.actors; j++) {%>
+        <li><%= movies.actors[j] %></li>
+        <% } %>
+      </ul>
     </li>
   <% } %>
   </ul>
 <br />
 
-<a href='/add'>Add product</a>&nbsp;&nbsp;<a href='/search'>Search product</a>
+<a href='/add'>Add movie</a>&nbsp;&nbsp;<a href='/search'>Search movie</a>
 
 </body>
 </html>
