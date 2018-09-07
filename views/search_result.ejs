@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Products</title>
+  <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+  <h2>Result</h2>
+  <p class='product'>
+    <span><%= product.name %></span>
+    <span><%= product.description %></span><br /><br />
+    <span><b>Price : </b><%= product.price %></span>
+  </p>
+
+  <form action='/delete' method='POST'>
+    <input type='hidden' name='name' value='<%=product.name%>'><br /><br />
+    <button type='submit'>Delete</button>
+  </form>
+
+</body>
+</html>
