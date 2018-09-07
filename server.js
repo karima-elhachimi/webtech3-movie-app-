@@ -30,6 +30,10 @@ app.get('/', function (req, res) {
     res.render('add.ejs');
 });
 
+app.get('/search', (req, res) => {
+    res.render('search.ejs');
+});
+
 app.post('/search', (req, res) => {
     var query = { name: req.body.name }
     db.collection('movies').find(query).toArray(function(err, result) {
