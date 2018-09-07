@@ -15,10 +15,10 @@
     <li class='product'>
       <span><%= movies[i].title %></span>
       <ul>
-        <span>Actors playing in movie: </span><br />
-        <% for(var j=0; j < movies.actors; j++) {%>
-        <li><%= movies.actors[j] %></li>
-        <% } %>
+        <span>Actors playing in the movie: </span><br />
+
+        <li><%= movies[i].actors %></li>
+
       </ul>
     </li>
   <% } %>

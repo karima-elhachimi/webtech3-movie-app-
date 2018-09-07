@@ -60,12 +60,17 @@ app.get('/list', (req, res) => {
 
 app.post('/add', (req, res) => {
 
+
+    let name = req.body.name;
+    let actors = req.body.actors;
     let movie = {
-        name: req.body.name,
-        actors: req.body.actors.str.split(',')
+        name: name,
+        actors: actors
     };
 
-    db.collection('movies').save(movie, (err, result) => {
+
+
+    db.collection('movies').save(req.body, (err, result) => {
         if (err) return console.log(err);
 
         console.log('saved to database');
